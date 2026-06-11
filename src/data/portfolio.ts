@@ -7,7 +7,7 @@ export const personalInfo = {
     "I build production-grade SaaS products from scratch — full-stack web apps with React, TypeScript, Express, and PostgreSQL. I specialize in designing architecture-first solutions for emerging markets: offline-capable, mobile-first, and local-payment-ready. Every project ships with zero TypeScript errors, production UI standards, and a relentless focus on quality.",
   resumeUrl: "#",
   github: "GovindMajhi8848",
-  email: "", // Add your email
+  email: "govindmajhi173@gmail.com",
 };
 
 export const skills = [
