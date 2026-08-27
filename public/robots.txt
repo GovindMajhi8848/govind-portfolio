@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Host
+Host: https://govindmajhi.dev
+
+# Sitemaps
+Sitemap: https://govindmajhi.dev/sitemap.xml
