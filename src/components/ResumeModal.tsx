@@ -17,7 +17,8 @@ import {
   FolderGit2, 
   FileText,
   Layers,
-  CheckCircle2
+  CheckCircle2,
+  Download
 } from 'lucide-react';
 import { personalInfo, education, certifications, experiences, ExperienceItem, projects } from '../data/portfolioData';
 
@@ -227,14 +228,25 @@ ${certifications.map(c => `• ${c.title} - ${c.issuer} (${c.year})`).join('\n')
               )}
             </button>
 
+            {/* Download PDF */}
+            <a
+              href="/Govind_Kumar_Majhi_CV.pdf"
+              download="Govind_Kumar_Majhi_CV.pdf"
+              className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 shadow-sm transition-colors"
+              title="Download official PDF CV"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Download PDF</span>
+            </a>
+
             {/* Print PDF */}
             <button
               onClick={handlePrint}
-              className="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white flex items-center gap-1.5 shadow-sm transition-colors"
+              className="px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 flex items-center gap-1.5 transition-colors"
               title="Print or Save as PDF"
             >
               <Printer className="w-3.5 h-3.5" />
-              <span>Print / Save PDF</span>
+              <span className="hidden sm:inline">Print</span>
             </button>
 
             {/* Close */}

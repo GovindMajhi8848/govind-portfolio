@@ -7,7 +7,7 @@
   <meta name="description" content="Official Curriculum Vitae of Govind Kumar Majhi — Product & UI/UX Designer and AI-Augmented Prototyper based in Nepal. Computer Science graduate (B.Tech 2024)." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -15,13 +15,14 @@
       --color-bg: #f8fafc;
       --color-surface: #ffffff;
       --color-text-main: #0f172a;
-      --color-text-muted: #475569;
+      --color-text-muted: #334155;
       --color-text-subtle: #64748b;
-      --color-primary: #2563eb;
-      --color-primary-dark: #1d4ed8;
+      --color-primary: #1d4ed8;
+      --color-primary-dark: #1e40af;
       --color-accent: #059669;
-      --color-border: #e2e8f0;
-      --color-border-subtle: #f1f5f9;
+      --color-border: #cbd5e1;
+      --color-border-light: #e2e8f0;
+      --color-card-bg: #f8fafc;
       --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
       --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
       --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
@@ -37,8 +38,8 @@
       font-family: var(--font-sans);
       background-color: var(--color-bg);
       color: var(--color-text-main);
-      line-height: 1.5;
-      font-size: 14px;
+      line-height: 1.45;
+      font-size: 13.5px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -50,7 +51,7 @@
       z-index: 100;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border-light);
       padding: 12px 24px;
       display: flex;
       justify-content: space-between;
@@ -98,7 +99,7 @@
     .btn-secondary {
       background: #f1f5f9;
       color: #334155;
-      border-color: #e2e8f0;
+      border-color: var(--color-border-light);
     }
 
     .btn-secondary:hover {
@@ -115,51 +116,51 @@
       background: var(--color-primary-dark);
     }
 
-    /* Main Container */
+    /* Page Container */
     .page-wrapper {
-      max-width: 960px;
-      margin: 36px auto;
+      max-width: 900px;
+      margin: 32px auto;
       padding: 0 20px;
     }
 
     .cv-sheet {
       background: var(--color-surface);
-      border: 1px solid var(--color-border);
+      border: 1px solid var(--color-border-light);
       border-radius: 16px;
-      padding: 56px;
+      padding: 44px 48px;
       box-shadow: var(--shadow-lg);
     }
 
     /* Header Section */
     .header {
-      border-bottom: 2px solid var(--color-border);
-      padding-bottom: 24px;
-      margin-bottom: 28px;
+      border-bottom: 2px solid var(--color-text-main);
+      padding-bottom: 16px;
+      margin-bottom: 18px;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 24px;
+      gap: 20px;
     }
 
     .header-main h1 {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 800;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.025em;
       color: var(--color-text-main);
       line-height: 1.1;
     }
 
     .header-title {
-      font-size: 16px;
-      font-weight: 600;
+      font-size: 14.5px;
+      font-weight: 700;
       color: var(--color-primary);
-      margin-top: 6px;
+      margin-top: 4px;
     }
 
     .header-subtitle {
-      font-size: 13px;
-      color: var(--color-text-muted);
-      margin-top: 4px;
+      font-size: 12px;
+      color: var(--color-text-subtle);
+      margin-top: 2px;
     }
 
     .contact-info {
@@ -169,169 +170,94 @@
       color: var(--color-text-muted);
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 4px;
+      white-space: nowrap;
     }
 
     .contact-info a {
       color: var(--color-primary);
       text-decoration: none;
+      font-weight: 500;
     }
 
     .contact-info a:hover {
       text-decoration: underline;
     }
 
-    /* Layout Columns */
-    .cv-grid {
-      display: grid;
-      grid-template-columns: 34% 66%;
-      gap: 36px;
-    }
-
+    /* Section Styles */
     .section {
-      margin-bottom: 26px;
+      margin-bottom: 18px;
     }
 
     .section-heading {
-      font-size: 12px;
+      font-size: 11.5px;
       font-family: var(--font-mono);
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--color-primary);
       border-bottom: 1.5px solid var(--color-border);
-      padding-bottom: 6px;
-      margin-bottom: 14px;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 6px;
     }
 
     .summary-text {
-      font-size: 13px;
-      color: var(--color-text-main);
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
-
-    /* Skills Box */
-    .skill-category {
-      background: var(--color-border-subtle);
-      border: 1px solid var(--color-border);
-      border-radius: 10px;
-      padding: 12px;
-      margin-bottom: 10px;
-    }
-
-    .skill-cat-title {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--color-text-main);
-      margin-bottom: 4px;
-    }
-
-    .skill-cat-items {
-      font-size: 11.5px;
-      color: var(--color-text-muted);
-      line-height: 1.5;
-    }
-
-    /* Timeline Items */
-    .item-card {
-      margin-bottom: 18px;
-    }
-
-    .item-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-    }
-
-    .item-title {
-      font-size: 13.5px;
-      font-weight: 700;
-      color: var(--color-text-main);
-    }
-
-    .item-company {
-      color: var(--color-primary);
-      font-weight: 600;
-    }
-
-    .item-badge {
-      font-family: var(--font-mono);
-      font-size: 10.5px;
-      color: var(--color-text-subtle);
-      white-space: nowrap;
-    }
-
-    .item-subtitle {
-      font-size: 11px;
-      font-family: var(--font-mono);
-      color: var(--color-text-subtle);
-      margin-top: 2px;
-      margin-bottom: 6px;
-    }
-
-    .bullet-list {
-      list-style-type: none;
-      padding-left: 0;
-      margin-top: 4px;
-    }
-
-    .bullet-list li {
-      position: relative;
-      padding-left: 14px;
-      font-size: 12px;
+      font-size: 12.5px;
       color: var(--color-text-muted);
       line-height: 1.55;
+    }
+
+    /* Core Competencies 2x2 Grid */
+    .competencies-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .comp-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .comp-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--color-text-main);
       margin-bottom: 4px;
-    }
-
-    .bullet-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--color-primary);
-      font-weight: bold;
-    }
-
-    .item-tags {
       display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-      margin-top: 6px;
+      align-items: center;
+      gap: 5px;
     }
 
-    .tag {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      background: #f1f5f9;
-      color: #334155;
-      padding: 2px 7px;
-      border-radius: 4px;
-      border: 1px solid #e2e8f0;
+    .comp-desc {
+      font-size: 11px;
+      color: var(--color-text-muted);
+      line-height: 1.45;
     }
 
     /* Projects Highlight Card */
     .project-card {
       background: #fafafa;
-      border: 1px solid var(--color-border);
-      border-radius: 10px;
-      padding: 14px;
-      margin-bottom: 12px;
+      border: 1px solid var(--color-border-light);
+      border-radius: 8px;
+      padding: 11px 14px;
+      margin-bottom: 10px;
     }
 
     .project-title-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .project-title {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--color-text-main);
     }
@@ -350,11 +276,103 @@
       text-decoration: underline;
     }
 
-    /* Education & Certifications */
-    .edu-item {
+    .item-subtitle {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--color-text-subtle);
+      margin-bottom: 5px;
+    }
+
+    .bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 13px;
+      font-size: 11.5px;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+      margin-bottom: 3px;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    .item-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 5px;
+    }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      background: #ffffff;
+      color: #334155;
+      padding: 1px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--color-border-light);
+    }
+
+    /* Experience Items */
+    .exp-item {
       border-left: 2px solid var(--color-primary);
+      padding-left: 12px;
+      margin-bottom: 14px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .exp-role {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-text-main);
+    }
+
+    .exp-company {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .exp-date {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      color: var(--color-text-subtle);
+      white-space: nowrap;
+    }
+
+    .exp-meta {
+      font-size: 10.5px;
+      font-family: var(--font-mono);
+      color: var(--color-text-subtle);
+      margin-bottom: 4px;
+    }
+
+    /* 2-Column Section on Page 2: Education & Certifications */
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 4px;
+    }
+
+    .edu-item {
+      border-left: 2px solid #2563eb;
       padding-left: 10px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .edu-degree {
@@ -366,12 +384,14 @@
     .edu-school {
       font-size: 11px;
       color: var(--color-text-muted);
+      margin-top: 1px;
     }
 
     .edu-meta {
       font-size: 10px;
       font-family: var(--font-mono);
       color: var(--color-text-subtle);
+      margin-top: 1px;
     }
 
     .cert-item {
@@ -379,13 +399,17 @@
       align-items: flex-start;
       gap: 6px;
       margin-bottom: 8px;
-      font-size: 11.5px;
+      font-size: 11px;
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: 6px;
+      padding: 6px 10px;
     }
 
     .cert-icon {
-      color: #10b981;
+      color: #059669;
       font-weight: bold;
-      line-height: 1;
+      line-height: 1.2;
     }
 
     .cert-title {
@@ -394,16 +418,33 @@
     }
 
     .cert-issuer {
-      font-size: 10.5px;
+      font-size: 10px;
       color: var(--color-text-subtle);
     }
 
-    /* Print Styles */
+    .page-footer {
+      border-top: 1px solid var(--color-border-light);
+      padding-top: 8px;
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      font-family: var(--font-mono);
+      color: var(--color-text-subtle);
+    }
+
+    /* Page Break Marker for Print */
+    .page-break {
+      page-break-after: always;
+      break-after: page;
+    }
+
+    /* Print-Only Styles */
     @media print {
       body {
         background: #ffffff;
         color: #000000;
-        font-size: 11pt;
+        font-size: 9.5pt;
       }
 
       .toolbar {
@@ -419,45 +460,147 @@
       .cv-sheet {
         border: none;
         border-radius: 0;
-        padding: 0;
+        padding: 0 !important;
         box-shadow: none;
       }
 
       .header {
-        border-bottom: 2px solid #000000;
-        padding-bottom: 12pt;
-        margin-bottom: 16pt;
+        border-bottom: 1.5pt solid #000000;
+        padding-bottom: 6pt;
+        margin-bottom: 8pt;
       }
 
       .header-main h1 {
-        font-size: 22pt;
+        font-size: 19pt;
         color: #000000;
       }
 
       .header-title {
         color: #1d4ed8;
-        font-size: 12pt;
+        font-size: 10.5pt;
+      }
+
+      .header-subtitle {
+        font-size: 8.5pt;
+      }
+
+      .contact-info {
+        font-size: 8.5pt;
+        gap: 2pt;
+      }
+
+      .section {
+        margin-bottom: 6pt;
       }
 
       .section-heading {
         color: #000000;
-        border-bottom: 1.5pt solid #000000;
+        border-bottom: 1pt solid #000000;
+        font-size: 8.8pt;
+        padding-bottom: 1.5pt;
+        margin-bottom: 4pt;
+      }
+
+      .summary-text {
+        font-size: 8.5pt;
+        line-height: 1.35;
+      }
+
+      .competencies-grid {
+        gap: 5pt;
+      }
+
+      .comp-card {
+        padding: 5pt 7pt;
+        border: 0.5pt solid #cbd5e1;
+      }
+
+      .comp-title {
+        font-size: 8.8pt;
+        margin-bottom: 1.5pt;
+      }
+
+      .comp-desc {
+        font-size: 8pt;
+        line-height: 1.3;
+      }
+
+      .project-card {
+        background: #ffffff;
+        border: 0.5pt solid #cbd5e1;
+        padding: 5pt 7pt;
+        margin-bottom: 4pt;
+        break-inside: avoid;
+      }
+
+      .project-title {
+        font-size: 9.2pt;
+      }
+
+      .item-subtitle {
+        font-size: 8pt;
+        margin-bottom: 2pt;
+      }
+
+      .bullet-list li {
+        font-size: 8.2pt;
+        line-height: 1.3;
+        margin-bottom: 1.5pt;
       }
 
       .bullet-list li::before {
         color: #000000;
       }
 
-      .skill-category,
-      .project-card {
-        background: #ffffff;
-        border: 1pt solid #cbd5e1;
-        break-inside: avoid;
+      .tag {
+        font-size: 7.2pt;
+        padding: 0 3pt;
       }
 
-      .item-card,
-      .section {
+      .exp-item {
         break-inside: avoid;
+        margin-bottom: 6pt;
+        padding-left: 7pt;
+      }
+
+      .exp-role {
+        font-size: 9.2pt;
+      }
+
+      .exp-meta {
+        font-size: 8pt;
+        margin-bottom: 2pt;
+      }
+
+      .bottom-grid {
+        gap: 8pt;
+      }
+
+      .edu-item {
+        margin-bottom: 5pt;
+        padding-left: 5pt;
+      }
+
+      .edu-degree {
+        font-size: 8.5pt;
+      }
+
+      .edu-school, .edu-meta {
+        font-size: 7.8pt;
+      }
+
+      .cert-item {
+        padding: 3pt 5pt;
+        margin-bottom: 3pt;
+        font-size: 8pt;
+      }
+
+      .cert-title {
+        font-size: 8.2pt;
+      }
+
+      .cert-issuer {
+        font-size: 7.5pt;
       }
 
       a {
@@ -469,26 +612,30 @@
         color: #1d4ed8;
       }
 
+      .page-footer {
+        border-top: 0.5pt solid #94a3b8;
+        padding-top: 3pt;
+        margin-top: 6pt;
+      }
+
       @page {
         size: A4;
-        margin: 1.2cm;
+        margin: 0.8cm 1.0cm;
       }
     }
 
     @media (max-width: 768px) {
       .cv-sheet {
-        padding: 24px;
+        padding: 24px 20px;
       }
-
       .header {
         flex-direction: column;
       }
-
       .contact-info {
         text-align: left;
       }
-
-      .cv-grid {
+      .competencies-grid,
+      .bottom-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -504,10 +651,13 @@
     </div>
     <div class="toolbar-actions">
       <a href="/" class="btn btn-secondary">
-        <span>← Portfolio</span>
+        <span>← Back to Portfolio</span>
+      </a>
+      <a href="/Govind_Kumar_Majhi_CV.pdf" download="Govind_Kumar_Majhi_CV.pdf" class="btn btn-secondary">
+        <span>⬇ Download PDF</span>
       </a>
       <button onclick="window.print()" class="btn btn-primary">
-        <span>Print / Save PDF</span>
+        <span>🖨 Print / Save PDF</span>
       </button>
     </div>
   </aside>
@@ -515,6 +665,8 @@
   <!-- CV Document Page Wrapper -->
   <div class="page-wrapper">
     <main class="cv-sheet">
+      
+      <!-- ================= PAGE 1 ================= -->
       
       <!-- Header Section -->
       <header class="header">
@@ -533,237 +685,239 @@
         </address>
       </header>
 
-      <!-- 2-Column CV Grid -->
-      <div class="cv-grid">
-        
-        <!-- Left Sidebar Column: Skills, Education, Certifications -->
-        <aside class="cv-left">
+      <!-- Professional Summary -->
+      <section class="section">
+        <h2 class="section-heading">Professional Summary</h2>
+        <p class="summary-text">
+          Product & UI/UX Designer and Computer Science graduate (B.Tech 2024) bridging human-centered interaction design and rapid AI-assisted vibe prototyping. Specializing in Figma design systems (Auto Layout 5.0, variables, design tokens), user research, and accelerating MVP development with modern AI workflows (Cursor, Claude Code, v0). Proven track record designing and launching live production web platforms with 98+ Lighthouse performance, WCAG accessibility, and high conversion.
+        </p>
+      </section>
+
+      <!-- Core Competencies (2x2 Matrix) -->
+      <section class="section">
+        <h2 class="section-heading">Core Competencies & Tooling</h2>
+        <div class="competencies-grid">
           
-          <!-- Core Competencies -->
-          <section class="section">
-            <h2 class="section-heading">Core Competencies</h2>
-
-            <div class="skill-category">
-              <div class="skill-cat-title">UI/UX & Product Design</div>
-              <div class="skill-cat-items">
-                Figma (Auto Layout 5.0, Variables, Design Tokens, Component Variants), Wireframing (Lo-Fi to Hi-Fi), Design Thinking (5-Stage), User Journey Maps, Usability Testing, WCAG 2.1 AA Accessibility.
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="skill-cat-title">AI & Vibe Coding</div>
-              <div class="skill-cat-items">
-                Claude Code, Cursor, GitHub Copilot, Gemini CLI, v0.dev by Vercel, Bolt.new, Spec-Driven Context Prompting, Rapid Prototyping Loops, Zero Design Drift.
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="skill-cat-title">Creative Suite & Branding</div>
-              <div class="skill-cat-items">
-                Canva Pro (Brand Kits, Presentation Decks), Adobe Illustrator & Photoshop (Vector Graphics, Collateral), UI Motion Reels & Video Editing.
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <div class="skill-cat-title">Systems & Tools</div>
-              <div class="skill-cat-items">
-                Git/GitHub Version Control, Vercel CI/CD Deployment, REST APIs, Zscaler Cloud Security.
-              </div>
-            </div>
-          </section>
-
-          <!-- Education -->
-          <section class="section">
-            <h2 class="section-heading">Education</h2>
-
-            <div class="edu-item">
-              <div class="edu-degree">B.Tech in Computer Science and Engineering</div>
-              <div class="edu-school">ITM University, Gwalior, MP, India</div>
-              <div class="edu-meta">2020 — 2024</div>
-            </div>
-
-            <div class="edu-item">
-              <div class="edu-degree">+2 Science (Higher Secondary)</div>
-              <div class="edu-school">Araniko Awasiya Secondary School, Biratnagar, Nepal</div>
-              <div class="edu-meta">2018 — 2020</div>
-            </div>
-          </section>
-
-          <!-- Certifications -->
-          <section class="section">
-            <h2 class="section-heading">Certifications</h2>
-
-            <div class="cert-item">
-              <span class="cert-icon">✓</span>
-              <div>
-                <div class="cert-title">UI/UX Design Specialization</div>
-                <div class="cert-issuer">Tech Axis • Kathmandu, Nepal (2024)</div>
-              </div>
-            </div>
-
-            <div class="cert-item">
-              <span class="cert-icon">✓</span>
-              <div>
-                <div class="cert-title">AWS Academy Cloud Architecting</div>
-                <div class="cert-issuer">Amazon Web Services (2024)</div>
-              </div>
-            </div>
-
-            <div class="cert-item">
-              <span class="cert-icon">✓</span>
-              <div>
-                <div class="cert-title">AWS Academy Cloud Foundations</div>
-                <div class="cert-issuer">Amazon Web Services (2024)</div>
-              </div>
-            </div>
-
-            <div class="cert-item">
-              <span class="cert-icon">✓</span>
-              <div>
-                <div class="cert-title">Cybersecurity Fundamentals Associate</div>
-                <div class="cert-issuer">Zscaler (2023)</div>
-              </div>
-            </div>
-          </section>
-
-        </aside>
-
-        <!-- Right Main Column: Summary, Projects, Experience -->
-        <div class="cv-right">
-
-          <!-- Executive Summary -->
-          <section class="section">
-            <h2 class="section-heading">Professional Summary</h2>
-            <p class="summary-text">
-              Product & UI/UX Designer and Computer Science graduate (B.Tech 2024) bridging human-centered interaction design and rapid AI-assisted vibe prototyping. Specializing in Figma design systems (Auto Layout 5.0, variables, design tokens), user research, and accelerating MVP development with modern AI workflows (Cursor, Claude Code, v0).
+          <div class="comp-card">
+            <div class="comp-title">🎨 UI/UX & Product Design</div>
+            <p class="comp-desc">
+              Figma (Auto Layout 5.0, Variables, Design Tokens, Component Variants), Wireframing (Lo-Fi to Hi-Fi), Design Thinking (5-Stage), User Journey Maps, Usability Testing, WCAG 2.1 AA Accessibility.
             </p>
-            <p class="summary-text">
-              Proven track record designing and launching live production web platforms with 98+ Lighthouse performance, WCAG accessibility, and high conversion.
+          </div>
+
+          <div class="comp-card">
+            <div class="comp-title">⚡ AI Vibe Coding & Prototyping</div>
+            <p class="comp-desc">
+              Claude Code, Cursor, GitHub Copilot, Gemini CLI, v0.dev by Vercel, Bolt.new, Spec-Driven Context Prompting, Rapid Prototyping Loops, Zero-Drift Design Translation.
             </p>
-          </section>
+          </div>
 
-          <!-- Featured Production Projects -->
-          <section class="section">
-            <h2 class="section-heading">Featured Production Projects</h2>
+          <div class="comp-card">
+            <div class="comp-title">🖌 Creative Suite & Branding</div>
+            <p class="comp-desc">
+              Canva Pro (Brand Kits, Presentation Pitch Decks), Adobe Illustrator & Photoshop (Vector Graphics, Collateral), UI Interaction Reels & Video Editing.
+            </p>
+          </div>
 
-            <!-- ClickDigitals -->
-            <article class="project-card">
-              <div class="project-title-row">
-                <div class="project-title">ClickDigitals — Digital Marketing & Tech Academy Web Platform</div>
-                <a href="https://clickdigitals.com.np" target="_blank" rel="noopener" class="live-link">
-                  <span>Visit Live ↗</span>
-                </a>
-              </div>
-              <div class="item-subtitle">Lead UI/UX & Web Designer • 2024 • Client: ClickDigitals Agency</div>
-              <ul class="bullet-list">
-                <li>Designed and launched official web platform for ClickDigitals, featuring audience targeting science, performance marketing campaigns, and interactive 6-track tech academy curriculum.</li>
-                <li>Engineered high-converting lead funnels, course syllabus modals, and responsive layouts with sub-second load times and 4.8★ user feedback.</li>
-              </ul>
-              <div class="item-tags">
-                <span class="tag">Figma</span>
-                <span class="tag">UI/UX</span>
-                <span class="tag">AI Vibe Coding</span>
-                <span class="tag">Canva Pro</span>
-                <span class="tag">Production Live</span>
-              </div>
-            </article>
-
-            <!-- Lilliput School -->
-            <article class="project-card">
-              <div class="project-title-row">
-                <div class="project-title">Lilliput Premier Elementary School — Official Web Portal</div>
-                <a href="https://lilliputschool.edu.np" target="_blank" rel="noopener" class="live-link">
-                  <span>Visit Live ↗</span>
-                </a>
-              </div>
-              <div class="item-subtitle">UI/UX Designer & Developer • 2024 • Institutional Client</div>
-              <ul class="bullet-list">
-                <li>Architected and built official institutional portal featuring dual Bikram Sambat / Gregorian academic calendar, admission inquiry funnel, and curriculum showcase.</li>
-                <li>Achieved a 98+ Google Lighthouse mobile performance score, zero layout shifts, and WCAG-compliant accessible contrast ratios.</li>
-              </ul>
-              <div class="item-tags">
-                <span class="tag">UI/UX Design</span>
-                <span class="tag">Dual Calendar</span>
-                <span class="tag">Performance 98+</span>
-                <span class="tag">Figma</span>
-                <span class="tag">Production Live</span>
-              </div>
-            </article>
-
-            <!-- FreshCart -->
-            <article class="project-card">
-              <div class="project-title-row">
-                <div class="project-title">FreshCart — Mobile Grocery & Quick Commerce Design</div>
-                <span class="item-badge">Tech Axis Capstone</span>
-              </div>
-              <div class="item-subtitle">Product Designer • 2024 • Mobile iOS/Android Prototype</div>
-              <ul class="bullet-list">
-                <li>Designed complete mobile e-commerce grocery delivery experience featuring 8 user flows, thumb-friendly navigation, and Figma Auto Layout 5.0 variables.</li>
-                <li>Conducted moderated usability sessions to reduce cart checkout friction by 40% in clickable prototypes.</li>
-              </ul>
-              <div class="item-tags">
-                <span class="tag">Mobile UX</span>
-                <span class="tag">Figma Auto Layout 5.0</span>
-                <span class="tag">User Testing</span>
-                <span class="tag">Design Tokens</span>
-              </div>
-            </article>
-          </section>
-
-          <!-- Work Experience -->
-          <section class="section">
-            <h2 class="section-heading">Professional Experience & Training</h2>
-
-            <!-- Freelance -->
-            <article class="item-card">
-              <div class="item-header">
-                <div class="item-title">UI/UX & Product Designer — <span class="item-company">Freelance / Independent Projects</span></div>
-                <span class="item-badge">2023 — Present</span>
-              </div>
-              <div class="item-subtitle">Nepal / Remote • Freelance</div>
-              <ul class="bullet-list">
-                <li>Designed and launched official production web platforms for ClickDigitals (https://clickdigitals.com.np) and Lilliput Premier Elementary School (https://lilliputschool.edu.np).</li>
-                <li>Created comprehensive UI/UX design systems, component libraries, typography tokens, and responsive user flows directly in Figma.</li>
-                <li>Accelerated interactive prototyping and rapid MVP delivery using AI vibe coding (Cursor, Claude Code, v0) with high fidelity and zero design drift.</li>
-                <li>Crafted brand identities, presentation decks, social media visual systems, and marketing collateral using Canva Pro, Adobe Illustrator, and Photoshop.</li>
-                <li>Ensured 98+ Lighthouse performance, accessible WCAG 2.1 contrast ratios, and seamless mobile-responsive layouts.</li>
-              </ul>
-              <div class="item-tags">
-                <span class="tag">Figma</span>
-                <span class="tag">Auto Layout 5.0</span>
-                <span class="tag">AI Vibe Coding</span>
-                <span class="tag">Canva Pro</span>
-                <span class="tag">Adobe Suite</span>
-                <span class="tag">Git</span>
-              </div>
-            </article>
-
-            <!-- Tech Axis -->
-            <article class="item-card">
-              <div class="item-header">
-                <div class="item-title">UI/UX Design Trainee & Researcher — <span class="item-company">Tech Axis</span></div>
-                <span class="item-badge">Jun 2024 — Aug 2024</span>
-              </div>
-              <div class="item-subtitle">Kathmandu, Nepal • Professional Training</div>
-              <ul class="bullet-list">
-                <li>Completed rigorous intensive training in the Design Thinking Process: Empathize, Define, Ideate, Prototype, and Test.</li>
-                <li>Mastered Figma Auto Layout, Constraints, Component Variants, Variables, and Design System Architecture.</li>
-                <li>Conducted usability testing sessions, mapped user journey flows, and built high-fidelity clickable interactive prototypes.</li>
-                <li>Applied typography theory, 8pt spacing grids, and color harmony to mobile and desktop product designs.</li>
-              </ul>
-              <div class="item-tags">
-                <span class="tag">Figma</span>
-                <span class="tag">Design Thinking</span>
-                <span class="tag">User Research</span>
-                <span class="tag">Interactive Prototyping</span>
-              </div>
-            </article>
-
-          </section>
+          <div class="comp-card">
+            <div class="comp-title">⚙️ Systems & Version Control</div>
+            <p class="comp-desc">
+              Git/GitHub Version Control, Branching & PR Reviews, Vercel CI/CD Deployment, REST APIs, Zscaler Cloud Security.
+            </p>
+          </div>
 
         </div>
+      </section>
+
+      <!-- Featured Production Projects -->
+      <section class="section">
+        <h2 class="section-heading">Featured Production Projects</h2>
+
+        <!-- ClickDigitals -->
+        <article class="project-card">
+          <div class="project-title-row">
+            <div class="project-title">ClickDigitals — Digital Marketing & Tech Academy Web Platform</div>
+            <a href="https://clickdigitals.com.np" target="_blank" rel="noopener" class="live-link">
+              <span>Visit Live ↗</span>
+            </a>
+          </div>
+          <div class="item-subtitle">Lead UI/UX & Web Designer • 2024 • Client: ClickDigitals Agency</div>
+          <ul class="bullet-list">
+            <li>Designed and launched official corporate website featuring audience targeting science, performance marketing campaigns, and interactive 6-track tech academy curriculum.</li>
+            <li>Engineered high-converting lead funnels, course syllabus modals, and responsive layouts with sub-second page loads and 4.8★ user feedback.</li>
+          </ul>
+          <div class="item-tags">
+            <span class="tag">Figma</span>
+            <span class="tag">UI/UX Design</span>
+            <span class="tag">AI Vibe Coding</span>
+            <span class="tag">Canva Pro</span>
+            <span class="tag">Production Live</span>
+          </div>
+        </article>
+
+        <!-- Lilliput School -->
+        <article class="project-card">
+          <div class="project-title-row">
+            <div class="project-title">Lilliput Premier Elementary School — Official Web Portal</div>
+            <a href="https://lilliputschool.edu.np" target="_blank" rel="noopener" class="live-link">
+              <span>Visit Live ↗</span>
+            </a>
+          </div>
+          <div class="item-subtitle">UI/UX Designer & Developer • 2024 • Institutional Client</div>
+          <ul class="bullet-list">
+            <li>Architected and built official institutional portal featuring dual Bikram Sambat / Gregorian academic calendar, admission inquiry funnel, and curriculum showcase.</li>
+            <li>Achieved a 98+ Google Lighthouse mobile performance score, zero layout shifts, and WCAG-compliant accessible contrast ratios.</li>
+          </ul>
+          <div class="item-tags">
+            <span class="tag">UI/UX Design</span>
+            <span class="tag">Dual Calendar Engine</span>
+            <span class="tag">Lighthouse 98+</span>
+            <span class="tag">Production Live</span>
+          </div>
+        </article>
+
+        <!-- FreshCart -->
+        <article class="project-card">
+          <div class="project-title-row">
+            <div class="project-title">FreshCart — Mobile Grocery & Quick Commerce Experience</div>
+            <span class="item-subtitle" style="margin:0;">Tech Axis Capstone</span>
+          </div>
+          <div class="item-subtitle">Product Designer • 2024 • Interactive Mobile iOS/Android Prototype</div>
+          <ul class="bullet-list">
+            <li>Designed complete mobile e-commerce grocery delivery experience featuring 8 user flows, thumb-friendly navigation, and Figma Auto Layout 5.0 variables.</li>
+            <li>Conducted moderated usability sessions across 12 test users to identify and eliminate checkout friction, reducing simulated drop-off by 40%.</li>
+          </ul>
+          <div class="item-tags">
+            <span class="tag">Mobile UX</span>
+            <span class="tag">Figma Auto Layout 5.0</span>
+            <span class="tag">Usability Testing</span>
+            <span class="tag">Design Tokens</span>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Explicit Print Page Break -->
+      <div class="page-break"></div>
+
+      <!-- ================= PAGE 2 ================= -->
+
+      <!-- Professional Experience & Training -->
+      <section class="section" style="padding-top: 8px;">
+        <h2 class="section-heading">Professional Experience & Training</h2>
+
+        <!-- Freelance -->
+        <article class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">UI/UX & Product Designer — <span class="exp-company">Freelance / Independent Projects</span></div>
+            <span class="exp-date">2023 — Present</span>
+          </div>
+          <div class="exp-meta">Nepal / Remote • Freelance Contract</div>
+          <ul class="bullet-list">
+            <li>Designed and launched official production web platforms for ClickDigitals (https://clickdigitals.com.np) and Lilliput Premier Elementary School (https://lilliputschool.edu.np).</li>
+            <li>Created comprehensive UI/UX design systems, component libraries, typography tokens, and responsive user flows directly in Figma.</li>
+            <li>Accelerated interactive prototyping and rapid MVP delivery using modern AI vibe coding (Cursor, Claude Code, v0) with high fidelity and zero design drift.</li>
+            <li>Crafted brand identities, presentation decks, social media visual systems, and marketing collateral using Canva Pro, Adobe Illustrator, and Photoshop.</li>
+            <li>Ensured 98+ Lighthouse performance, accessible WCAG 2.1 contrast ratios, and seamless mobile-responsive layouts.</li>
+          </ul>
+          <div class="item-tags">
+            <span class="tag">Figma</span>
+            <span class="tag">Auto Layout 5.0</span>
+            <span class="tag">AI Vibe Coding</span>
+            <span class="tag">Canva Pro</span>
+            <span class="tag">Adobe Suite</span>
+            <span class="tag">Git</span>
+          </div>
+        </article>
+
+        <!-- Tech Axis -->
+        <article class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">UI/UX Design Trainee & Researcher — <span class="exp-company">Tech Axis</span></div>
+            <span class="exp-date">Jun 2024 — Aug 2024</span>
+          </div>
+          <div class="exp-meta">Kathmandu, Nepal • Professional Training Specialization</div>
+          <ul class="bullet-list">
+            <li>Completed rigorous intensive training in the Design Thinking Process: Empathize, Define, Ideate, Prototype, and Test.</li>
+            <li>Mastered Figma Auto Layout, Constraints, Component Variants, Variables, and Design System Architecture.</li>
+            <li>Conducted usability testing sessions, mapped user journey flows, and built high-fidelity clickable interactive prototypes.</li>
+            <li>Applied typography theory, 8pt spacing grids, and color harmony to mobile and desktop product designs.</li>
+          </ul>
+          <div class="item-tags">
+            <span class="tag">Figma</span>
+            <span class="tag">Design Thinking</span>
+            <span class="tag">User Research</span>
+            <span class="tag">Wireframing</span>
+            <span class="tag">Interactive Prototyping</span>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- 2-Column Section: Education & Certifications -->
+      <div class="bottom-grid">
+        
+        <!-- Education -->
+        <section class="section">
+          <h2 class="section-heading">Education</h2>
+
+          <div class="edu-item">
+            <div class="edu-degree">B.Tech in Computer Science & Engineering</div>
+            <div class="edu-school">ITM University, Gwalior, MP, India</div>
+            <div class="edu-meta">2020 — 2024 • Algorithms, HCI, Software Engineering</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-degree">+2 Science (Higher Secondary)</div>
+            <div class="edu-school">Araniko Awasiya Secondary School, Biratnagar, Nepal</div>
+            <div class="edu-meta">2018 — 2020 • Physics, Mathematics, Computer Science</div>
+          </div>
+        </section>
+
+        <!-- Official Certifications -->
+        <section class="section">
+          <h2 class="section-heading">Certifications & Credentials</h2>
+
+          <div class="cert-item">
+            <span class="cert-icon">✓</span>
+            <div>
+              <div class="cert-title">UI/UX Design Specialization</div>
+              <div class="cert-issuer">Tech Axis • Kathmandu, Nepal (2024)</div>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <span class="cert-icon">✓</span>
+            <div>
+              <div class="cert-title">AWS Academy Cloud Architecting</div>
+              <div class="cert-issuer">Amazon Web Services (2024)</div>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <span class="cert-icon">✓</span>
+            <div>
+              <div class="cert-title">AWS Academy Cloud Foundations</div>
+              <div class="cert-issuer">Amazon Web Services (2024)</div>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <span class="cert-icon">✓</span>
+            <div>
+              <div class="cert-title">Cybersecurity Fundamentals Associate</div>
+              <div class="cert-issuer">Zscaler (2023)</div>
+            </div>
+          </div>
+        </section>
 
       </div>
+
+      <!-- CV Footer -->
+      <footer class="page-footer">
+        <div>Govind Kumar Majhi — Curriculum Vitae</div>
+        <div>Page 2 of 2 • Verified at govind-portfolio.vercel.app/cv.html</div>
+      </footer>
 
     </main>
   </div>
