@@ -76,7 +76,7 @@ export interface Article {
 
 export const personalInfo = {
   name: "Govind Kumar Majhi",
-  role: "UI/UX Designer & Frontend Developer",
+  role: "Product & UI/UX Designer | AI-Augmented Prototyper",
   tagline: "Crafting intuitive interfaces in Figma and building interactive prototypes with AI vibe coding.",
   location: "Sunsari / Kathmandu, Nepal",
   phone: "+977 9826384499",
@@ -503,23 +503,24 @@ export const experiences: ExperienceItem[] = [
       "Conducted usability testing sessions, mapped user journey flows, and built high-fidelity clickable interactive prototypes.",
       "Applied typography theory, 8pt spacing grids, and color harmony to mobile and desktop product designs."
     ],
-    technologies: ["Figma", "Auto Layout", "Design Thinking", "User Research", "Wireframing", "Prototyping", "Variables"],
+    technologies: ["Figma", "Auto Layout 5.0", "Design Thinking", "User Research", "Wireframing", "Interactive Prototyping", "Design Tokens"],
     highlight: "Designed complete end-to-end desktop and mobile e-commerce prototypes evaluated with top honors."
   },
   {
     id: "freelance-design-dev",
-    role: "UI/UX Designer & Frontend Developer",
+    role: "UI/UX & Product Designer",
     company: "Freelance / Independent Projects",
     period: "2023 — Present",
     location: "Nepal / Remote",
     type: "Freelance",
     description: [
-      "Architected, designed, and developed the official production platforms for ClickDigitals (https://clickdigitals.com.np) and Lilliput Premier Elementary School (https://lilliputschool.edu.np).",
-      "Engineered high-performance marketing landing pages, interactive course catalogs, dual academic calendar engines, and lead inquiry workflows with React and Tailwind CSS.",
-      "Create marketing banners, social media assets, and vector brand kits using Adobe Illustrator, Photoshop, and Canva.",
-      "Ensure web projects achieve 95+ mobile performance scores with responsive Tailwind CSS & CSS3 layouts and full Schema.org structured data."
+      "Designed and launched official production web platforms for ClickDigitals (https://clickdigitals.com.np) and Lilliput Premier Elementary School (https://lilliputschool.edu.np).",
+      "Created comprehensive UI/UX design systems, component libraries, typography tokens, and responsive user flows directly in Figma.",
+      "Accelerated interactive prototyping and rapid MVP delivery using AI vibe coding (Cursor, Claude Code, v0) with high fidelity and zero design drift.",
+      "Crafted brand identities, presentation decks, social media visual systems, and marketing collateral using Canva Pro, Adobe Illustrator, and Photoshop.",
+      "Ensured 98+ Lighthouse performance, accessible WCAG 2.1 contrast ratios, and seamless mobile-responsive layouts."
     ],
-    technologies: ["React", "TypeScript", "Tailwind CSS", "JavaScript ES6+", "Figma", "HTML5/CSS3", "Canva", "Git"],
+    technologies: ["Figma", "Auto Layout 5.0", "Design Systems", "AI Vibe Coding", "Canva Pro", "Adobe Suite", "Responsive Design", "Git"],
     highlight: "Successfully launched production platforms for ClickDigitals and Lilliput School with 98+ performance scores."
   }
 ];
