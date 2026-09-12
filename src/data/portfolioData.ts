@@ -76,26 +76,28 @@ export interface Article {
 
 export const personalInfo = {
   name: "Govind Kumar Majhi",
-  role: "Product & UI/UX Designer | AI-Augmented Prototyper",
-  tagline: "Crafting intuitive interfaces in Figma and building interactive prototypes with AI vibe coding.",
-  location: "Sunsari / Kathmandu, Nepal",
+  role: "Product & UI/UX Designer • Creative Frontend Engineer",
+  tagline: "Designing high-fidelity systems in Figma. Shipping production software in React.",
+  location: "Kathmandu / Sunsari, Nepal",
   phone: "+977 9826384499",
-  remoteStatus: "Open to Remote & On-Site Roles",
-  availability: "Available for full-time roles & UI/UX contracts",
+  remoteStatus: "Open to Global Remote & Hybrid Roles",
+  availability: "Available for Q2/Q3 Design Systems & Frontend Contracts",
   email: "govindmajhi173@gmail.com",
   linkedin: "https://www.linkedin.com/in/govindkumarmajhi173/",
+  github: "https://github.com/govindmajhi",
+  figma: "https://figma.com/@govindmajhi",
   canvaWorkspace: "https://www.canva.com/design/DAGwM_FuciM/wHWYVp5J94eQ6QL96otlFQ/edit",
-  bioHeadline: "I design intuitive interfaces in Figma and build rapid prototypes with AI vibe coding.",
+  bioHeadline: "Designing high-fidelity systems in Figma. Shipping production software in React.",
   bioFull: [
-    "I'm Govind Kumar Majhi — a Computer Science graduate (B.Tech 2024) with a strong foundation in UI/UX design, wireframing, interactive prototyping, and modern design systems.",
-    "I bridge the gap between human empathy and digital products. Having trained deeply in the Design Thinking Process, Auto Layout, Figma Variables, and Component Design Systems at Tech Axis, I craft user experiences and design systems that are visually polished, accessible, and intuitive.",
-    "I leverage modern AI developer workflows and vibe coding (Cursor, Claude Code, GitHub Copilot, v0) to accelerate prototyping, explore multiple UI directions, and ship high-fidelity interactive experiences at 10x velocity without compromising design standards."
+    "I'm Govind Kumar Majhi — a Computer Science graduate (B.Tech 2024), UI/UX designer, and frontend engineer specializing in Figma Auto Layout 5.0, design token architectures, and production React 19 / TypeScript applications.",
+    "I believe great digital products happen at the intersection of aesthetic discipline and technical rigor. Having trained extensively in the 5-stage Design Thinking Process, Auto Layout, Figma Variables, and WCAG 2.2 AAA accessibility at Tech Axis, I create design systems that scale effortlessly from wireframe to deployment.",
+    "By combining modern AI developer workflows (Cursor, Claude Code, GitHub Copilot) with strong fundamentals in component architecture, I explore multiple creative directions rapidly and ship production-grade, accessible experiences at high velocity."
   ],
   quickStats: [
     { label: "Education", value: "B.Tech CSE (2024)" },
-    { label: "Core Craft", value: "UI/UX & Prototyping" },
-    { label: "AI Workflows", value: "Vibe Coding & Tools" },
-    { label: "Certifications", value: "Tech Axis & Zscaler" }
+    { label: "Design Craft", value: "Figma Auto Layout & Tokens" },
+    { label: "Frontend Stack", value: "React 19 & TypeScript" },
+    { label: "Cloud Certs", value: "AWS Academy Certified" }
   ]
 };
 

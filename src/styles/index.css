@@ -8,22 +8,31 @@
     --bg-secondary: #f8fafc;
     --bg-card: #ffffff;
     --border-subtle: #e2e8f0;
-    --text-main: #0f172a;
-    --text-muted: #64748b;
+    --border-specular: rgba(0, 0, 0, 0.06);
+    --text-main: #090d16;
+    --text-muted: #526077;
     --accent: #2563eb;
-    --font-heading: 'Plus Jakarta Sans', 'Inter', sans-serif;
-    --font-sans: 'Inter', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --accent-glow: rgba(37, 99, 235, 0.15);
+    --font-heading: "Plus Jakarta Sans", "Inter", sans-serif;
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+
+    /* Emil Kowalski Spring Physics */
+    --spring-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    --spring-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .dark {
-    --bg-primary: #090a0d;
-    --bg-secondary: #10131a;
-    --bg-card: #141722;
-    --border-subtle: #1e2433;
+    /* 2026 Deep Obsidian / Display-P3 Space */
+    --bg-primary: #08090d;
+    --bg-secondary: #0e1118;
+    --bg-card: #121520;
+    --border-subtle: #1c2230;
+    --border-specular: rgba(255, 255, 255, 0.08);
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
     --accent: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.18);
   }
 
   body {
@@ -34,10 +43,12 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+    letter-spacing: -0.025em;
   }
 
   code, kbd, samp, pre {
@@ -47,69 +58,75 @@
 
 /* Accessible visible focus rings across interactive elements */
 :focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #38bdf8;
   outline-offset: 2px;
 }
 
 /* Refined custom scrollbar */
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.28);
+  background: rgba(148, 163, 184, 0.25);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(148, 163, 184, 0.45);
 }
 
-/* Glassmorphism & Card Physics */
+/* Glassmorphism & Card Physics (Liquid Glass Standard) */
 .glass-panel {
   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border-specular);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
 }
 
 .dark .glass-panel {
-  background: rgba(17, 20, 31, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(30, 36, 51, 0.85);
+  background: rgba(14, 17, 24, 0.78);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--border-specular);
+  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.45), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
 }
 
+/* Tactile Craft Card with 3D Spring Physics */
 .craft-card {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
-              border-color 0.2s ease;
+  transition: transform 0.35s var(--spring-smooth), 
+              box-shadow 0.35s var(--spring-smooth), 
+              border-color 0.25s ease;
   transform-style: preserve-3d;
-  will-change: transform;
+  will-change: transform, box-shadow;
 }
 
 .craft-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.004);
 }
 
 .craft-button {
-  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.18s var(--spring-smooth), 
+              opacity 0.18s ease, 
+              background-color 0.18s ease, 
+              box-shadow 0.18s ease;
 }
 
 .craft-button:active {
-  transform: scale(0.97);
+  transform: scale(0.96);
 }
 
 /* Dot grid background - subtle, human */
 .bg-dot-pattern {
-  background-image: radial-gradient(rgba(148, 163, 184, 0.14) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 .dark .bg-dot-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -119,7 +136,7 @@
 }
 
 .glow-effect::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -1px;
   background: linear-gradient(90deg, rgba(56, 189, 248, 0.3), rgba(168, 85, 247, 0.3));
@@ -140,10 +157,30 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #2563eb, #06b6d4, #8b5cf6);
+  background: linear-gradient(90deg, #2563eb, #06b6d4, #a855f7);
   z-index: 100;
   transform-origin: 0%;
   transition: transform 0.05s linear;
+}
+
+/* Native CSS Scroll-Driven Animations (2026 Standard) */
+@supports (animation-timeline: view()) {
+  .scroll-reveal {
+    animation: revealCard 0.6s var(--spring-smooth) both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 25%;
+  }
+}
+
+@keyframes revealCard {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Print Stylesheet for clean CV generation */

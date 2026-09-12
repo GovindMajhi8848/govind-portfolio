@@ -34,6 +34,7 @@ export const NovaStoreMockup: React.FC = () => {
   const [cartCount, setCartCount] = useState(2);
   const [activeTab, setActiveTab] = useState('All');
   const [addedId, setAddedId] = useState<number | null>(null);
+  const [showFigmaOverlay, setShowFigmaOverlay] = useState(false);
 
   const allProducts = [
     {
@@ -87,6 +88,18 @@ export const NovaStoreMockup: React.FC = () => {
           <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0"></span>
           <span className="truncate">store.novaretail.io/explore</span>
         </div>
+        <button
+          onClick={() => setShowFigmaOverlay(!showFigmaOverlay)}
+          className={`px-2 py-0.5 rounded text-[10px] font-mono flex items-center gap-1 transition-all shrink-0 ${
+            showFigmaOverlay 
+              ? "bg-purple-600 text-white shadow-xs font-semibold" 
+              : "bg-slate-800 text-slate-300 hover:text-white"
+          }`}
+          title="Toggle Figma Auto Layout 5.0 measurement inspection"
+        >
+          <Layers className="w-3 h-3 text-purple-300" />
+          <span>${showFigmaOverlay ? "Figma Specs ON" : "Inspect Figma Specs"}</span>
+        </button>
         <div className="flex items-center gap-2 shrink-0">
           <div className="p-1 px-2 rounded-lg bg-blue-600/20 border border-blue-500/30 text-blue-400 flex items-center gap-1.5">
             <ShoppingCart className="w-3.5 h-3.5" />
@@ -135,7 +148,7 @@ export const NovaStoreMockup: React.FC = () => {
           return (
             <div 
               key={item.id}
-              className={`p-3 rounded-xl bg-slate-900/90 border ${item.border} flex flex-col justify-between group hover:border-blue-500/60 transition-all`}
+              className={`p-3 rounded-xl bg-slate-900/90 border ${showFigmaOverlay ? "border-dashed border-purple-500 ring-1 ring-purple-500/50" : item.border} flex flex-col justify-between group hover:border-blue-500/60 transition-all relative`}
             >
               <div>
                 {/* Product Visual Container */}

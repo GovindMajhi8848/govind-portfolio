@@ -80,7 +80,13 @@ export const App: React.FC = () => {
         darkMode={darkMode}
         onToggleDarkMode={() => {
           playClick();
-          setDarkMode(!darkMode);
+          if ("startViewTransition" in document) {
+            (document as any).startViewTransition(() => {
+              setDarkMode(!darkMode);
+            });
+          } else {
+            setDarkMode(!darkMode);
+          }
         }}
         onOpenCommandPalette={() => {
           playClick();
